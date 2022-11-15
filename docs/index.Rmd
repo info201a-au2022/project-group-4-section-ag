@@ -1,54 +1,42 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: "Effects of Social Media on Mental Health"
+author: "Qinghui Xie, Cindy Fu, Haipei Chen"
+date: "11/24/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-## What is this file for?
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+##Table
 
-* Please see Canvas for more details.
+```{r, echo = FALSE}
+source("../source/table.R")
+final_table
+```
+The table above includes seven different variables that we will work with. From the different variables, we are able to classify each age group with different characteristics. Of the seven variables, ones we will be putting more focus on are times on social media and exercise as well as types of social media and their content. 
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+##Chart 1
+```{r, echo = FALSE}
+source("../source/chart_cindy.R")
+social_media_versus_exercise_plot
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+
+##Chart 2
+
+```{r, echo = FALSE}
+source("../source/chart_haipei.R")
+age_versus_number_of_sm_plot
+
 ```
 
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+##Chart 3
+```{r, echo=FALSE}
+source("../source/chart_hui.R")
+age_versus_inappropriate_content_degree
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
