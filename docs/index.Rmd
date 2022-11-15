@@ -84,6 +84,14 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(lintr)
 ```
 
+### Dynamic Paragraph
+
+```{r, echo = FALSE}
+source("../source/summary_info.R")
+summary_info
+```
+In this analysis, summary statistics were computed using the largest dataset of the project to find the relationship between social media usage among youth and their mental well-being. We used data such as inappropriate content, the amount of time spent on social media, preferred method of communication, etc. Among all 291 observations in the dataset, the youngest participants are two 14-year-old teenagers, and the oldest participants are eight 23-year-old youths. From the summary conclusion, it was found that participants who felt the most exposed to inappropriate content on social media mainly used Whatsapp and Instagram. However, most of them only use social media for less than 2.5 hours per day. It was also found that older participants in this data-collection process prefer face-to-face and phone communication instead of text messages.
+
 
 ## Table
 
@@ -110,6 +118,8 @@ source("../source/chart_haipei.R")
 age_versus_number_of_sm_plot
 
 ```
+
+This visualization is a scatterplot of the number of social media platforms 14 to 23-year-olds own. From the scatterplot, there isn’t a significant correlation between age and the number of platforms. However, it was shown that youth above 19 generally use social media platforms more than those under 19. There is especially a spike in the number of ages 21-23.
 
 ## Chart 3
 ```{r, echo=FALSE}

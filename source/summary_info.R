@@ -1,7 +1,7 @@
 library(dplyr)
 library(readxl)
 
-my_data <- read_excel("Documents/info201/deliverable/project-group-4-section-ag/data/Effects_of_social_media_d1.xlsx")
+my_data <- read_excel("../data/Effects_of_social_media_d1.xlsx")
 View(my_data)
 summary_info <- list()
 
