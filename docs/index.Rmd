@@ -5,30 +5,38 @@ date: "11/24/2022"
 output: html_document
 ---
 
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
 
-```{r, include=FALSE}
+
+##Table
+
+```{r, echo = FALSE}
+source("../source/table.R")
+final_table
+```
+The table above includes seven different variables that we will work with. From the different variables, we are able to classify each age group with different characteristics. Of the seven variables, ones we will be putting more focus on are times on social media and exercise as well as types of social media and their content. 
+
+##Chart 1
+```{r, echo = FALSE}
 source("../source/chart_cindy.R")
-
-```
-
-### Example 2: Initialize a variable and then use it
-```{r}
-
+social_media_versus_exercise_plot
 ```
 
 
+##Chart 2
 
+```{r, echo = FALSE}
+source("../source/chart_haipei.R")
+age_versus_number_of_sm_plot
 
-```{r cars}
-summary(cars)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+##Chart 3
+```{r, echo=FALSE}
+source("../source/chart_hui.R")
+age_versus_inappropriate_content_degree
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
