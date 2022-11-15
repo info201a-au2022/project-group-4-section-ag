@@ -1,11 +1,13 @@
 
-## Effects of Social Media on Mental Health
+# Effects of Social Media on Mental Health
 
 #### Team: [ə] Team 
 #### Authors: Cindy Fu (yuxinfu@uw.edu), Qinghui Xie (qxie@uw.edu), Haipei Chen (hpia22@uw.edu)
 #### Affiliation: INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 #### Date: Nov. 14, 2022
-### Abstract
+
+
+## Abstract
 
 Our main question is **understanding how social media affects our mental health**. This question is important because, in our current generation, almost everyone with technology is exposed to social media. To address this, we will create visuals of patterns and correlations between social media use and user characteristics and trends.
 
