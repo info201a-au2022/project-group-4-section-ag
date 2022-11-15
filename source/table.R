@@ -13,7 +13,7 @@ num_sm <- my_data %>% pull(`Which social media platform/s do you like the most o
 num_of_entries <- my_data %>%
   group_by(`What is your age?`) %>%
   count() %>%
-  pull(`What is your age?`)
+  pull(n)
 
 final_table <- data.frame(age = as.integer(my_data$`What is your age?`), 
                           hours_on_social_media = time_sm, 
