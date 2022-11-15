@@ -99,6 +99,7 @@ source("../source/chart_cindy.R")
 social_media_versus_exercise_plot
 ```
 
+This graph shows how young people of different ages spent time on social media relative to exercise. Particularly, this bar plot reveals the relationship between time difference with age. The chart is a bell-like shape, and it is mostly normal-distributed. Young people between 18 and 21 spend more time on social media than on exercise. On the other hand, the people younger and older than them have a slightly more balanced time usage. I include this graph because it clearly revealed how people of different ages use social media.
 
 ## Chart 2
 
