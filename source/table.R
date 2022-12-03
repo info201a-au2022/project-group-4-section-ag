@@ -3,8 +3,12 @@ library("readxl")
 library("dplyr")
 library("stringr")
 # xlsx files
+
+# dataset 1
 my_data <- read_excel("../data/Effects_of_social_media_d1.xlsx")
+#dataset 2
 bd <- read_excel("../data/Bangladesh.xlsx")
+# dataset 3
 mental_data <- read_excel("../data/SM_on_Mental_Health.xls")
 
 time_sm <- my_data %>% pull(`How much time do you spend on social media in a day?`) %>% str_sub(start = -7)
@@ -77,3 +81,14 @@ ds2_3 <- ds2_3 %>%
 #test code
 #testt <- overall_datasets$age %>% unique()
 #print(testt)
+
+# three datasets 
+# dataset 1: my_data <- read_excel("../data/Effects_of_social_media_d1.xlsx")
+# dataset 2: bd <- read_excel("../data/Bangladesh.xlsx")
+# dataset 3: mental_data <- read_excel("../data/SM_on_Mental_Health.xls")
+
+# dataframe after wrangling 
+my_data # all data about youth (came from dataset 1)
+bangla_data <- bangla # selected data about social media from bangladesh dataset (came from dataset 2)
+combined_data <- ds2_3 # age, time on social media, and locatioin datasets (came from dataset 2, 3)
+
