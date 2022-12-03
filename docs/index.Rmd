@@ -120,7 +120,7 @@ age_versus_number_of_sm_plot
 
 ```
 
-This visualization is a scatterplot of the number of social media platforms 14 to 23-year-olds own. From the scatterplot, there isn’t a significant correlation between age and the number of platforms. However, it was shown that youth above 19 generally use social media platforms more than those under 19. There is especially a spike in the number of ages 21-23 which emphasizes the main audience of different medias. It purposefully visualizes different distrubutions of media and age. 
+This visualization is a scatterplot of the number of social media platforms 14 to 23-year-olds own. From the scatterplot, there isn’t a significant correlation between age and the number of platforms. However, it was shown that youth above 19 generally use social media platforms more than those under 19. There is especially a spike in the number of ages 21-23 which emphasizes the main audience of different medias. It purposefully visualizes different distributions of media and age. 
 
 ## Chart 3
 ```{r, echo=FALSE}

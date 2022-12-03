@@ -5,11 +5,11 @@ library("stringr")
 # xlsx files
 
 # dataset 1
-my_data <- read_excel("../data/Effects_of_social_media_d1.xlsx")
+my_data <- read_excel("./data/Effects_of_social_media_d1.xlsx")
 #dataset 2
-bd <- read_excel("../data/Bangladesh.xlsx")
+bd <- read_excel("./data/Bangladesh.xlsx")
 # dataset 3
-mental_data <- read_excel("../data/SM_on_Mental_Health.xls")
+mental_data <- read_excel("./data/SM_on_Mental_Health.xls")
 
 time_sm <- my_data %>% pull(`How much time do you spend on social media in a day?`) %>% str_sub(start = -7)
 time_sm <- as.numeric(gsub(".*?([0-9]+).*", "\\1", time_sm)) %>% replace(is.na(.), 0)

@@ -87,7 +87,7 @@ library(lintr)
 ### Dynamic Paragraph
 
 ```{r, echo = FALSE}
-source("../source/summary_info.R")
+source("./source/summary_info.R")
 summary_info
 ```
 
@@ -97,7 +97,7 @@ In this analysis, summary statistics were computed using the largest dataset of 
 ## Table
 
 ```{r, echo = FALSE}
-source("/source/table.R")
+source("./source/table.R")
 final_table
 ```
 
@@ -106,7 +106,7 @@ This table shows how 291 young people between the age of 14 and 23 used social m
 ## Chart 1
 
 ```{r, echo = FALSE}
-source("/source/chart_cindy.R")
+source("./source/chart_cindy.R")
 social_media_versus_exercise_plot
 ```
 
@@ -115,7 +115,7 @@ This graph shows how young people of different ages spent time on social media r
 ## Chart 2
 
 ```{r, echo = FALSE}
-source("/source/chart_haipei.R")
+source("./source/chart_haipei.R")
 age_versus_number_of_sm_plot
 
 ```
@@ -124,7 +124,7 @@ This visualization is a scatterplot of the number of social media platforms 14 t
 
 ## Chart 3
 ```{r, echo=FALSE}
-source("/source/chart_hui.R")
+source("./source/chart_hui.R")
 age_versus_inappropriate_content_degree
 ```
 
