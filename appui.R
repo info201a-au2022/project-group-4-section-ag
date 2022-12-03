@@ -20,18 +20,28 @@ report_page <- tabPanel(
     includeMarkdown("index.rmd")
   )
 )
-#   
-#   fluidPage(
-#   includeMarkdown("index.rmd")
-# )
-# 
-# scatter_panel <- tabPanel(
-#   "Report",
-#   titlePanel("The Final Report"),
-#   sidebarLayout(
-#     
-    
-    
+
+hui_side <- sidebarPanel(
+  selectInput(inputId = "location", 
+               label = "Choose a Country", 
+               choices = unique(data$location))
+  )
+
+hui_main <- mainPanel(
+  plotOutput("line")
+  )
+  
+
+hui_page <- tabPanel(
+  "Line",
+  titlePanel("Age and Hours Used"),
+  sidebarLayout(
+    hui_side,
+    hui_main
+  )
+)
+  
+
     
     
 #cindy map maybe with country?
@@ -49,12 +59,6 @@ report_page <- tabPanel(
 ui <- navbarPage(
   "Group 4",
   introduction_page,
+  hui_page,
   report_page
 )
-# ui <- navbarPage(
-#   "Introduction",
-# #  bar_panel, 
-# # line_panel,
-# #  scatter_panel,
-#   "Report"
-# )
