@@ -45,7 +45,7 @@ cindy_page <- tabPanel(
     titlePanel("Understanding the Behavior of Youth on Social Media"), 
     sidebarLayout(
       sidebarPanel(uiOutput("selectVariable")), 
-      mainPanel(plotOutput("chosenPlot"))
+      mainPanel(plotlyOutput("chosenPlot"))
     )
 )
 

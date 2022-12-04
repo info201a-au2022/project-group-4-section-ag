@@ -9,6 +9,7 @@ library(shiny)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(plotly)
 source("./source/table.R")
 ds2_3$age <- as.numeric(substr(ds2_3$age , 1, 2))
 
@@ -46,15 +47,15 @@ server <- function(input, output) {
     if ( "time_on_social_media" %in% input$chosen) return(final_table$time_on_social_media)
   })
   
-  barPlot <- reactive({
-    ggplot(data = final_table) + 
-      geom_col(mapping = aes(x = age, y = data()), fill = "lightgreen", color = "black") + 
+
+  output$chosenPlot <- renderPlotly({
+    value <- data()
+    p <- ggplot(data = final_table) + 
+      geom_col(mapping = aes(x = age, y = value), fill = "lightgreen", color = "black") + 
       labs(x = "age", 
            y = "tbd", 
-           title = "tbd") 
-  })
-  output$chosenPlot <- renderPlot({
-    barPlot()
+           title = "tbd")
+    ggplotly(p)
   })
 }
 
