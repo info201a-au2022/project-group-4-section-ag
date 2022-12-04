@@ -22,7 +22,7 @@ data <- ds2_3 %>%
 colNames <- final_table %>% 
   select(number_of_social_media_platforms, inappropriate_content_degree, time_on_social_media, time_on_exercise, how_much_more_hours_spend_on_social_media_compared_to_exercise) %>% 
   colnames()
-  
+
 server <- function(input, output) {
   # output$line <- renderPlot({
   #   ggplot(data = (cleaned_data %>% filter(location == input$location))) +
@@ -36,7 +36,14 @@ server <- function(input, output) {
   )
   
   output$selectVariable <- renderUI({
-    selectInput("chosen", "Chose a variable you are interested", choices = colNames, selected = 1)
+    selectInput("chosen", 
+                "Chose a variable you are interested", 
+                choices = list("How many social media platforms young people have per person?" = colNames[1], 
+                               "How much do young people feel that they are exposed to inappropriate content(out of 10)?" = colNames[2], 
+                               "How much time do young people spend on social media on average per day?" = colNames[3], 
+                               "How much time do young people spend on exercise on average per day?" = colNames[4], 
+                               "How much more hours do young people spend on social media compared to exercise on average per day?" = colNames[5]), 
+                selected = 1)
   })
   
   data <- reactive({
@@ -47,14 +54,22 @@ server <- function(input, output) {
     if ( "time_on_social_media" %in% input$chosen) return(final_table$time_on_social_media)
   })
   
+  unit <- reactive({
+    if ( "number_of_social_media_platforms" %in% input$chosen) return("number of platforms")
+    if ( "inappropriate_content_degree" %in% input$chosen) return("inappropriate degree")
+    if ( "time_on_exercise" %in% input$chosen) return("hour(s)")
+    if ( "how_much_more_hours_spend_on_social_media_compared_to_exercise" %in% input$chosen) return("hour(s)")
+    if ( "time_on_social_media" %in% input$chosen) return("hour(s)")
+  })
 
   output$chosenPlot <- renderPlotly({
     value <- data()
     p <- ggplot(data = final_table) + 
       geom_col(mapping = aes(x = age, y = value), fill = "lightgreen", color = "black") + 
       labs(x = "age", 
-           y = "tbd", 
-           title = "tbd")
+           y = unit(), 
+           title = paste0(input$chosen, " Versus Age for Young People (14-23)"))+
+      theme(plot.title = element_text(hjust = 0.5))
     ggplotly(p)
   })
 }
