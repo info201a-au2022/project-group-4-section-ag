@@ -7,6 +7,8 @@
 # df <- read_excel("../data/Effects_of_social_media_d1.xlsx")
 library(shiny)
 library(tidyverse)
+library(dplyr)
+library(ggplot2)
 source("./source/table.R")
 ds2_3$age <- as.numeric(substr(ds2_3$age , 1, 2))
 
@@ -16,6 +18,10 @@ data <- ds2_3 %>%
   summarise(time_on_sm = mean(time_on_sm)) %>% 
   as.data.frame()
 
+colNames <- final_table %>% 
+  select(number_of_social_media_platforms, inappropriate_content_degree, time_on_social_media, time_on_exercise, how_much_more_hours_spend_on_social_media_compared_to_exercise) %>% 
+  colnames()
+  
 server <- function(input, output) {
   # output$line <- renderPlot({
   #   ggplot(data = (cleaned_data %>% filter(location == input$location))) +
@@ -27,6 +33,29 @@ server <- function(input, output) {
            aes(age, time_on_sm)) + geom_line()
   })
   )
+  
+  output$selectVariable <- renderUI({
+    selectInput("chosen", "Chose a variable you are interested", choices = colNames, selected = 1)
+  })
+  
+  data <- reactive({
+    if ( "number_of_social_media_platforms" %in% input$chosen) return(final_table$number_of_social_media_platforms)
+    if ( "inappropriate_content_degree" %in% input$chosen) return(final_table$inappropriate_content_degree)
+    if ( "time_on_exercise" %in% input$chosen) return(final_table$time_on_exercise)
+    if ( "how_much_more_hours_spend_on_social_media_compared_to_exercise" %in% input$chosen) return(final_table$how_much_more_hours_spend_on_social_media_compared_to_exercise)
+    if ( "time_on_social_media" %in% input$chosen) return(final_table$time_on_social_media)
+  })
+  
+  barPlot <- reactive({
+    ggplot(data = final_table) + 
+      geom_col(mapping = aes(x = age, y = data()), fill = "lightgreen", color = "black") + 
+      labs(x = "age", 
+           y = "tbd", 
+           title = "tbd") 
+  })
+  output$chosenPlot <- renderPlot({
+    barPlot()
+  })
 }
 
 

@@ -44,7 +44,7 @@ final_table <- final_table %>%
          time_on_social_media, 
          time_on_exercise, 
          how_much_more_hours_spend_on_social_media_compared_to_exercise)
-
+final_table
 
 # simplified bangladesh dataset
 # bangladesh dataset: bangla

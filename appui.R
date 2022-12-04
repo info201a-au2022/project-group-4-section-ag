@@ -29,7 +29,7 @@ hui_side <- sidebarPanel(
 
 hui_main <- mainPanel(
   plotOutput("line")
-  )
+)
   
 
 hui_page <- tabPanel(
@@ -40,6 +40,15 @@ hui_page <- tabPanel(
     hui_main
   )
 )
+cindy_page <- tabPanel(
+    "Youth Analysis", 
+    titlePanel("Understanding the Behavior of Youth on Social Media"), 
+    sidebarLayout(
+      sidebarPanel(uiOutput("selectVariable")), 
+      mainPanel(plotOutput("chosenPlot"))
+    )
+)
+
   
 
     
@@ -60,5 +69,6 @@ ui <- navbarPage(
   "Group 4",
   introduction_page,
   hui_page,
-  report_page
+  report_page,
+  cindy_page
 )
