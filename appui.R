@@ -1,6 +1,6 @@
 # library(shiny)
 library(plotly)
-
+library(shinythemes)
 
 #introduction_content <- sidebarPanel(
 library(markdown)
@@ -8,7 +8,6 @@ library(shiny)
 
 introduction_page <-tabPanel(
   "Introduction",
-  titlePanel("Introduction"),
   fluidPage(
     includeMarkdown("./docs/intro.Rmd")
   )
@@ -87,6 +86,7 @@ summary_page <- tabPanel(
   )
 )  
 ui <- navbarPage(
+  theme = shinytheme("journal"), 
   "Group 4",
   introduction_page,
   hui_page,

@@ -39,7 +39,8 @@ server <- function(input, output) {
            aes(age, time_on_sm)) + geom_line() + 
       labs(x = "Age (Years)", 
            y = "Hours on Social Media", 
-           title = "Different Ages and their Usage of Social Media")
+           title = "Different Ages and their Usage of Social Media")+
+      theme(plot.title = element_text(hjust = 0.5))
     ggplotly(plotLine)
   })
   )

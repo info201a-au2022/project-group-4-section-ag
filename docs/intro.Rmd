@@ -3,20 +3,28 @@ title: "intro"
 output: html_document
 date: "2022-12-03"
 ---
-## The Impact of Social Media on Mental Health
+<h1 align="center"> The Impact of Social Media on Mental Health </h1>
 
-**Do you have social media?**
+<article>
+<div align="center"> <h3>Do you have social media?</h3> </div>
 
-**How much time do you spend on social media?**
+<div align="center"> <h3>How much time do you spend on social media?</h3>  </div>
 
-**How many social media apps do you have?**
+<div align="center"> <h3>How many social media apps do you have?</h3>  </div>  
 
-Nowadays, social media has become an integral part of everyday life. Do you want to keep in touch? Let’s follow each other on Instagram! What are you up to? Send me a snap! The amount of time we spend on social media has taken up such a large part of our social life that it is one of the most used ways people connect with each other. 
+<p>    </p>
+</article>
 
-However, social media has offered the opportunity for people to create a carefully crafted online image of themselves rather than reflecting reality. People would only like to post about the highlights of their life, while we oftentimes ignore the mental health issues that lie underneath the filters and follower counts. This would only exacerbate the underlying social hierarchy on digital platforms, which would indirectly lead to social anxiety amongst users and worse mental health issues such as depression. In this data analysis, we aim to investigate the impact of social media on mental health, specifically concerning the young generation under forty years old. To back up our analysis, we have gathered and organized three large datasets: social media usage of 15-40-year-olds in Bangladesh, 17-22-year-olds in the United States, and 15-23-year-olds in India during the COVID-19 lockdown.
+<article style="display:flex;flex-direction:row;padding-left:8em;padding-right:8em;padding-top:2em">
+<div> <img src="meme.jpeg" alt="meme" width="500" height="600"> </div>
 
-From this analysis, we have found that people spend as much as nine hours a day on social media, and the number can go even higher during the pandemic lockdown. Although there is not a clear causal relationship between social media usage and mental health issues, there is a correlation in that the more time people spend on social media, the more social anxiety and depression they feel within that period of time. This shows that the increased social media usage did not open up more doors in people’s social life, but rather took away the in-person social connection that people originally have by connecting face to face, one on one. 
+<div style="padding-left:2em;border:1em;font-size:17px;color:#272727;">
+<p>Nowadays, social media has become an integral part of everyday life. Do you want to keep in touch? Let’s follow each other on Instagram! What are you up to? Send me a snap! The amount of time we spend on social media has taken up such a large part of our social life that it is one of the most used ways people connect with each other. </p>
 
-Therefore, the key takeaway from this data analysis is that social media indirectly exacerbates mental health issues concerning people’s social interactions. As much as the advancement of technology brings us this new way of connecting with people, it is important to acknowledge the negative impacts that social media brings to the table and take the necessary steps to handle the negative influences. We encourage people to take the time off from social media and have more in-person conversations with others to ensure that social media is a healthy and resourceful tool. 
+<p>However, social media has offered the opportunity for people to create a carefully crafted online image of themselves rather than reflecting reality. People would only like to post about the highlights of their life, while we oftentimes ignore the mental health issues that lie underneath the filters and follower counts. This would only exacerbate the underlying social hierarchy on digital platforms, which would indirectly lead to social anxiety amongst users and worse mental health issues such as depression. <strong>In this data analysis, we aim to investigate the impact of social media on mental health, specifically concerning the young generation under forty years old. </strong> To back up our analysis, we have gathered and organized three large datasets: <strong>social media usage of 15-40-year-olds in Bangladesh</strong>, <strong>17-22-year-olds in the United States</strong>, and <strong>15-23-year-olds in India during the COVID-19 lockdown</strong>.</p>
 
-![](meme.jpeg)
+<p>From this analysis, we have found that people spend as much as nine hours a day on social media, and the number can go even higher during the pandemic lockdown. Although there is not a clear causal relationship between social media usage and mental health issues, there is a correlation in that the more time people spend on social media, the more social anxiety and depression they feel within that period of time. This shows that the increased social media usage did not open up more doors in people’s social life, but rather took away the in-person social connection that people originally have by connecting face to face, one on one. </p>
+
+<p>Therefore, the key takeaway from this data analysis is that social media indirectly exacerbates mental health issues concerning people’s social interactions. As much as the advancement of technology brings us this new way of connecting with people, it is important to acknowledge the negative impacts that social media brings to the table and take the necessary steps to handle the negative influences. We encourage people to take the time off from social media and have more in-person conversations with others to ensure that social media is a healthy and resourceful tool.</p> 
+</div>
+</article>
