@@ -11,10 +11,11 @@ library(dplyr)
 library(ggplot2)
 library(plotly)
 source("./source/table.R")
+
 ds2_3$age <- as.numeric(substr(ds2_3$age , 1, 2))
 
 # for hui page
-data <- ds2_3 %>% 
+hdata <- ds2_3 %>% 
   group_by(age, location) %>% 
   select(age,time_on_sm, location) %>% 
   summarise(time_on_sm = mean(time_on_sm)) %>% 
@@ -48,10 +49,11 @@ server <- function(input, output) {
   #     labs(x = "Age", y = "Hours", title = "Effects of Age and Hours on Social Media")
   #     })
   output$line <- renderPlot(return ({
-    ggplot(data %>% filter(location == input$location), 
+    ggplot(hdata %>% filter(location == input$location), 
            aes(age, time_on_sm)) + geom_line()
   })
   )
+  
   
   # cindy page
   output$selectVariable <- renderUI({
@@ -138,25 +140,5 @@ server <- function(input, output) {
 }
 
 
-  
 
-# scatter_panel <- tabPanel(
-#   "Scatter",
-#   titlePanel("Population v.s. Vote Power"),
-#   sidebarLayout(
-#     scatter_sidebar_content,
-#     scatter_main_content
-#   )
-# )
-# S
-# server <- function(input, output) { 
-#   output$bar <- renderPlotly({ 
-#     return(build_map(joined_data, input$mapvar))
-#   }) 
-#   output$scatter <- renderPlotly({
-#     return(build_scatter(joined_data, input$search))
-#   })
-#   output$line <- renderPlotly({ 
-#     return(build_map(joined_data, input$mapvar))
-#   }) 
-# }
+  

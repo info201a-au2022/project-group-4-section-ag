@@ -10,14 +10,14 @@ introduction_page <-tabPanel(
   "Introduction",
   titlePanel("Introduction"),
   fluidPage(
-    includeMarkdown("intro.rmd")
+    includeMarkdown("intro.Rmd")
   )
 )
 report_page <- tabPanel(
   "Report",
   titlePanel("The Final Report"),
   fluidPage(
-    includeMarkdown("index.rmd")
+    includeMarkdown("index.Rmd")
   )
 )
 
@@ -66,7 +66,7 @@ last_page <- tabPanel(
 #    "r",
 #    label = "Which Country to Map",
 #    choices = list(
-#      "Bangledash" = "",
+#      "Bangladash" = "",
 #      "India" = "",
 #      "America" = ""
 #    )
