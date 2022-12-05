@@ -1,48 +1,19 @@
+# Final Project Repository
+**INFO-201: _Foundational Skills For Data Science_ (Autumn 2022)**
 
-# The `/docs` Directory
-
-All of our project reports can be found in this directory. Our key reports are 
-as follows: 
+*P01: Project Proposal*: [Project Proposal Title - Edit Me!](./docs/p01-proposal.md) 
 
 
-|Report | Brief Description|
+|Project Directories | Brief Description|
 |---------------| -----------------|
-|[Project Proposal (FIX ME!)](./xxx) | A brief description of your P1:Project Proposal
-|[Exploratory Data Analysis](./xxx) | A brief description of your exploratory data analyis report
-|[Interactive Vizualizaiton](./xxx) | A brief description of your final report. 
+|[`/data`](./data) | All project datasets should be stored and documented here. For example, if you work with Common Separated Value (.cvs) datasets, they would stored here and documented in this directory's README.md file. Similarly, if you get data from web APIs, you would document the APIs in the directory's `README.md`.
+|[`/docs`](./docs) | All project reports and web documents will be published from this directory. This includes Markdown files (.md), R Markdown files (.Rmd),   HTML files (.html), and so on. The `./docs` directory is the root directory of the website for your project. It will also be used to store all of your design work and project documentation.|
+|[`/instructions`](./instructions)| This directory contains the project design brief.  |
+|[`/source`](./source) | All for your R source code will be located in this directory. To organize your code, you might also decide to create sub-directories.
+| .gitignore | This  file is important. It tells git to ignore all files that are listed therein. Ignoring "non-useful" files will make it *much* easier to work togther in your team. See Freeman and Ross (2019, section 3.6) for details.  |
+| LICENSE | This is a straigtforward software license that basically says "You own the copyright of your code.  Others can use your code, so long as they cite that they are doing so." You should put your names into the LICENSE file. If you would like to use a different license, that would be fine! |
 
-
-## DEVELOPER Note 0
-* If the `/docs` directory or the notes below are confusing, please don't worry - We will cover all of the things below in lecture and/or lab.
-* As always, ask your TA or TEAMS if you have questions. 
-
-## DEVELOPER Note 1
-`/docs`
-
-* Use the `/docs` directory to organize all for your R Markdown files, which have the extension `.Rmd`.
-* Your R Markdown files are used to create reports that can be published on the web as HTML files.  That is, R Markdown (.Rmd) --> web page (.html) --> Published on GitHub in your `/docs` directory.
-* This is the basic workflow:
-  - Go to RStudio
-  - File > New file > R Markdown
-  - Edit the file 
-  - Save the file in `/docs`
-  - From RStudio, Knit the file (this creates an HTML file for publishing)
-  - Push your `/docs` directory to your GitHub repository
-* Once you push your `/docs` directory, you can view your reports in a web browser by using an URL like this: `https://info-201a-wi22.github.io/final-project/xxx/index.html`
-
-Where: 
-1. `info-201a-wi22`    is the organization 
-1. `github.io`         is a webserver that GitHub makes available to us
-1. `final-project`     is the repository name 
-1. `xxx`               is your GitHub username 
-1. `index.htlm`        is the document you would like to view
-
-## DEVELOPER Note 2: IMPORTANT: Setting up your webserver 
-1. You must make your repository *public*. To make it public: Go to your GitHub repository > Settings (top-right) > Change visibility (Danger Zone) > Make Public
-1. You must set the pages source to /docs. To do so: Got your GitHub repository > Pages (bottom-left) > Select "/docs" from the pulldown menu
-1. If you run into trouble, pleaes ask your TA or post on Teams - as usual, it is straigthforward once you know how but can be tricky to figure out the first time.
-
-## DEVELOPER Note 3:  Clear and Concise Documentation
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
-aim for clarity and conciseness.
-* When done, be sure to delete these NOTE sections and the example CSV file (which are intended for you, of course, not your audience!)
+### Developer notes: 
+* You will use this repository for developing your Final Project 
+* You will customized and add to this basic directory structure over the course of your project - edit the above table has needed
+* When ready, delete these developer notes
