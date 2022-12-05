@@ -3,13 +3,13 @@ title: "intro"
 output: html_document
 date: "2022-12-03"
 ---
-# The Impact of Social Media on Mental Health
+## The Impact of Social Media on Mental Health
 
-Do you have social media? 
+**Do you have social media?**
 
-How much time do you spend on social media?
+**How much time do you spend on social media?**
 
-How many social media apps do you have?
+**How many social media apps do you have?**
 
 Nowadays, social media has become an integral part of everyday life. Do you want to keep in touch? Let’s follow each other on Instagram! What are you up to? Send me a snap! The amount of time we spend on social media has taken up such a large part of our social life that it is one of the most used ways people connect with each other. 
 
@@ -18,3 +18,5 @@ However, social media has offered the opportunity for people to create a careful
 From this analysis, we have found that people spend as much as nine hours a day on social media, and the number can go even higher during the pandemic lockdown. Although there is not a clear causal relationship between social media usage and mental health issues, there is a correlation in that the more time people spend on social media, the more social anxiety and depression they feel within that period of time. This shows that the increased social media usage did not open up more doors in people’s social life, but rather took away the in-person social connection that people originally have by connecting face to face, one on one. 
 
 Therefore, the key takeaway from this data analysis is that social media indirectly exacerbates mental health issues concerning people’s social interactions. As much as the advancement of technology brings us this new way of connecting with people, it is important to acknowledge the negative impacts that social media brings to the table and take the necessary steps to handle the negative influences. We encourage people to take the time off from social media and have more in-person conversations with others to ensure that social media is a healthy and resourceful tool. 
+
+![](meme.jpeg)
