@@ -1,8 +1,6 @@
-# library(shiny)
 library(plotly)
 library(shinythemes)
 
-#introduction_content <- sidebarPanel(
 library(markdown)
 library(shiny)
 
@@ -51,6 +49,7 @@ hui_page <- tabPanel(
     hui_main
   )
 )
+
 cindy_page <- tabPanel(
     "Youth Analysis", 
     titlePanel("Understanding the Behavior of Youth on Social Media"), 

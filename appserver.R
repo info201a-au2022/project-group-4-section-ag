@@ -1,10 +1,3 @@
-# library(dplyr)
-# source("../source/chart_hui.R")
-# source("../source/chart_haipei.R")
-# source("../source/chart_cindy.R")
-# 
-# 
-# df <- read_excel("../data/Effects_of_social_media_d1.xlsx")
 library(shiny)
 library(tidyverse)
 library(dplyr)
@@ -28,12 +21,6 @@ colNames <- final_table %>%
 
 # server
 server <- function(input, output) {
-  # hui page
-  # output$line <- renderPlot({
-  #   ggplot(data = (cleaned_data %>% filter(location == input$location))) +
-  #     geom_line(mapping = aes(x = cleaned_data$age, y = cleaned_data$time_on_sm)) + 
-  #     labs(x = "Age", y = "Hours", title = "Effects of Age and Hours on Social Media")
-  #     })
   output$line <- renderPlotly(return ({
     plotLine <- ggplot(hdata %>% filter(location == input$location), 
            aes(age, time_on_sm)) + geom_line() + 
@@ -44,7 +31,6 @@ server <- function(input, output) {
     ggplotly(plotLine)
   })
   )
-  
   
   # cindy page
   output$selectVariable <- renderUI(return({
@@ -131,7 +117,6 @@ server <- function(input, output) {
     ggplotly(plot1)
   })
   )
-  
 }
 
 
