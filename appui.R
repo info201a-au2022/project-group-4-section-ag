@@ -78,12 +78,19 @@ last_page <- tabPanel(
   )
 )
 
-    
+summary_page <- tabPanel(
+  "Summary",
+  titlePanel("The Biggest Takeaways"),
+  fluidPage(
+    includeMarkdown("./docs/summary.Rmd")
+  )
+)  
 ui <- navbarPage(
   "Group 4",
   introduction_page,
   hui_page,
   cindy_page, 
   last_page,
+  summary_page,
   report_page
 )
