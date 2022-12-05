@@ -92,3 +92,9 @@ my_data # all data about youth (came from dataset 1)
 bangla_data <- bangla # selected data about social media from bangladesh dataset (came from dataset 2)
 combined_data <- ds2_3 # age, time on social media, and locatioin datasets (came from dataset 2, 3)
 
+replace <- bangla_data %>%
+  select(p30_worry_to_much) %>%
+  str_replace_all("Half days", "Half of days")
+bangla_data <- bangla_data %>%
+  mutate(p30_worry_too_much = str_replace_all(bangla_data$p30_worry_to_much, "Half days", "Half of days")) %>%
+  select(-p30_worry_to_much)

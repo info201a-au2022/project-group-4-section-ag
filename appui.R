@@ -49,7 +49,14 @@ cindy_page <- tabPanel(
     )
 )
 
-  
+last_page <- tabPanel(
+  "Negative Influence of Social Media", 
+  titlePanel("Understanding the Negative Effects of Social Media on Mental Health and Physical Health"), 
+  sidebarLayout(
+    sidebarPanel(uiOutput("selectButton")), 
+    mainPanel(plotlyOutput("buttonPlot"))
+  )
+)
 
     
     
@@ -69,6 +76,7 @@ ui <- navbarPage(
   "Group 4",
   introduction_page,
   hui_page,
-  report_page,
-  cindy_page
+  cindy_page, 
+  last_page,
+  report_page
 )
