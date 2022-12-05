@@ -10,14 +10,14 @@ introduction_page <-tabPanel(
   "Introduction",
   titlePanel("Introduction"),
   fluidPage(
-    includeMarkdown("intro.Rmd")
+    includeMarkdown("./docs/intro.Rmd")
   )
 )
 report_page <- tabPanel(
   "Report",
   titlePanel("The Final Report"),
   fluidPage(
-    includeMarkdown("index.Rmd")
+    includeMarkdown("./docs/index.Rmd")
   )
 )
 
