@@ -130,8 +130,7 @@ server <- function(input, output) {
       geom_bar(position = "fill", stat = "identity") +
       labs(x = "Hour(s)", 
            y = "Proportion", 
-           title = paste0(se_data %>% select(2) %>% colnames(), " versus Time on Social Meida for People in Bangladesh in 30 Days")+
-             theme(plot.title = element_text(hjust = 0.5)))
+           title = paste0(se_data %>% select(2) %>% colnames(), " versus Time on Social Meida for People in Bangladesh in 30 Days"))
     plot1
     ggplotly(plot1)
   })
