@@ -59,7 +59,7 @@ server <- function(input, output) {
   
   
   # cindy page
-  output$selectVariable <- renderUI({
+  output$selectVariable <- renderUI(return({
     selectInput("chosen", 
                 "Chose a question you are interested", 
                 choices = list("How many social media platforms young people have per person?" = colNames[1], 
@@ -69,6 +69,7 @@ server <- function(input, output) {
                                "How much more hours do young people spend on social media compared to exercise on average per day?" = colNames[5]), 
                 selected = 1)
   })
+  )
   
   data <- reactive({
     if ( "number_of_social_media_platforms" %in% input$chosen) return(final_table$number_of_social_media_platforms)
@@ -86,7 +87,7 @@ server <- function(input, output) {
     if ( "time_on_social_media" %in% input$chosen) return("hour(s)")
   })
 
-  output$chosenPlot <- renderPlotly({
+  output$chosenPlot <- renderPlotly(return({
     value <- data()
     p <- ggplot(data = final_table) + 
       geom_col(mapping = aes(x = age, y = value), fill = "lightgreen", color = "black") + 
@@ -96,9 +97,10 @@ server <- function(input, output) {
       theme(plot.title = element_text(hjust = 0.5))
     ggplotly(p)
   })
+  )
   
   # last page
-  output$selectButton <- renderUI({
+  output$selectButton <- renderUI(return({
     selectInput("button", 
                 label = h3("Select a Variable to See its Relationship With Time on Social Media"),
                 choices = list("Getting Emotionally Influenced by Other's Posts?" = "emotion", 
@@ -108,6 +110,7 @@ server <- function(input, output) {
                                 "Sleep Quality" = "sleep"), 
                  selected = 1)
   })
+  )
   
   data2 <- reactive({
     if ("emotion" %in% input$button) return(bangla_data %>% select(time_on_sm, emotion_influence_by_other_post))
@@ -117,7 +120,7 @@ server <- function(input, output) {
     if ("sleep" %in% input$button) return(bangla_data %>% select(time_on_sm, p30_sleep_quality_rate))
   })
   
-  output$buttonPlot <- renderPlotly({
+  output$buttonPlot <- renderPlotly(return({
     se_data <- data2()
     v <- se_data %>% select(2) %>% unique() %>% pull()
     len <- se_data %>% select(2) %>% unique() %>% nrow()
@@ -139,6 +142,7 @@ server <- function(input, output) {
     plot1
     ggplotly(plot1)
   })
+  )
   
 }
 
