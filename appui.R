@@ -1,5 +1,5 @@
 # library(shiny)
-# library(plotly)
+library(plotly)
 
 
 #introduction_content <- sidebarPanel(
