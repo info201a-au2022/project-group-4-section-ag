@@ -24,7 +24,9 @@ report_page <- tabPanel(
 hui_side <- sidebarPanel(
   selectInput(inputId = "location", 
                label = "Choose a Country", 
-               choices = unique(data$location))
+               choices = list("Bangladesh" ="bangladesh" ,
+                              "India" = "India")
+  )
   )
 
 hui_main <- mainPanel(
