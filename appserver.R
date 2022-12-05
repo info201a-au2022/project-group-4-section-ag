@@ -50,7 +50,10 @@ server <- function(input, output) {
   #     })
   output$line <- renderPlot(return ({
     ggplot(hdata %>% filter(location == input$location), 
-           aes(age, time_on_sm)) + geom_line()
+           aes(age, time_on_sm)) + geom_line() + 
+      labs(x = "Age (Years)", 
+           y = "Hours on Social Media", 
+           title = "Different Ages and their Usage of Social Media")
   })
   )
   

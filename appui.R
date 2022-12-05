@@ -33,7 +33,7 @@ hui_main <- mainPanel(
   
 
 hui_page <- tabPanel(
-  "Line",
+  "Time on Media",
   titlePanel("Age and Hours Used"),
   sidebarLayout(
     hui_side,
@@ -59,19 +59,6 @@ last_page <- tabPanel(
 )
 
     
-    
-#cindy map maybe with country?
-#map_sidebar_content <- sidebarPanel(
-#  selectInput(
-#    "r",
-#    label = "Which Country to Map",
-#    choices = list(
-#      "Bangladash" = "",
-#      "India" = "",
-#      "America" = ""
-#    )
-#  )
-#)
 ui <- navbarPage(
   "Group 4",
   introduction_page,
