@@ -26,20 +26,6 @@ colNames <- final_table %>%
   select(number_of_social_media_platforms, inappropriate_content_degree, time_on_social_media, time_on_exercise, how_much_more_hours_spend_on_social_media_compared_to_exercise) %>% 
   colnames()
 
-# for last paage
-test1 <- bangla_data$friends_on_social_media %>% unique()
-test2 <- bangla_data$personal_friends_on_sm %>% unique()
-test3 <- bangla_data$if_sm_is_good_thing %>% unique()
-test4 <- bangla_data$emotion_influence_by_other_post %>% unique()
-test5 <- bangla_data$if_no_sm_better_mental_health %>% unique()
-test6 <- bangla_data$p30_feeling_down_depress_hopeless %>% unique()
-test7 <- bangla_data$p30_poor_appetite_over_eating %>% unique()
-test8 <- bangla_data$p30_worry_too_much %>% unique()
-test9 <- bangla_data$p30_sleep_quality_rate %>% unique()
-
-        #bangla_data <- bangla_data %>%
-           # mutate(bmi = body_weight/(height*height))
-
 # server
 server <- function(input, output) {
   # hui page
@@ -48,12 +34,13 @@ server <- function(input, output) {
   #     geom_line(mapping = aes(x = cleaned_data$age, y = cleaned_data$time_on_sm)) + 
   #     labs(x = "Age", y = "Hours", title = "Effects of Age and Hours on Social Media")
   #     })
-  output$line <- renderPlot(return ({
-    ggplot(hdata %>% filter(location == input$location), 
+  output$line <- renderPlotly(return ({
+    plotLine <- ggplot(hdata %>% filter(location == input$location), 
            aes(age, time_on_sm)) + geom_line() + 
       labs(x = "Age (Years)", 
            y = "Hours on Social Media", 
            title = "Different Ages and their Usage of Social Media")
+    ggplotly(plotLine)
   })
   )
   

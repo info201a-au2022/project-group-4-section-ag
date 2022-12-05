@@ -40,7 +40,7 @@ hui_side <- sidebarPanel(
   )
 
 hui_main <- mainPanel(
-  plotOutput("line")
+  plotlyOutput("line")
 )
   
 
@@ -73,7 +73,8 @@ last_page <- tabPanel(
   "Negative Influence of Social Media", 
   titlePanel("Understanding the Negative Effects of Social Media on Mental Health and Physical Health"), 
   sidebarLayout(
-    sidebarPanel(uiOutput("selectButton")), 
+    sidebarPanel(uiOutput("selectButton"), 
+                 print("This chart is a stacked bar graph that analyses the negative effects of social media on mental health and physical health. All the variables in this graph are qualitative data collected from survey respondents, who would answer ther questions on a scale that determines frequency. Variables include analyzing emotional swings, overthinking, anxiety, depression, and sleep quality. The analysis of this chart provides valuable information which leads to the conclusion that the more time users spend on social media, the more mental health issues they experience.")), 
     mainPanel(plotlyOutput("buttonPlot"))
   )
 )
