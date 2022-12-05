@@ -26,7 +26,17 @@ hui_side <- sidebarPanel(
                label = "Choose a Country", 
                choices = list("Bangladesh" ="bangladesh" ,
                               "India" = "India")
-  )
+  ),
+  print("This chart is a line graph correlating the age of social media users 
+        and their social media usage through different parts of the world. 
+        First, in Bangladesh, the graph exhibits an average of approximately 
+        three hours spent on social media across the age range. There is a spike in 
+        36 years old and 53 years old with an average of 5 hours of social media usage. 
+        The average social media usage of people under the age of 35 was fairly stable, 
+        while the standard deviation of social media usage above that age was much greater. 
+        This shows that older people’s social media behaviors vary drastically from person 
+        to person, while young adults grew up with technology and exhibit the same patterns. 
+        The graph representing India is much more fluid and follows a downward trend.")
   )
 
 hui_main <- mainPanel(
@@ -46,8 +56,16 @@ cindy_page <- tabPanel(
     "Youth Analysis", 
     titlePanel("Understanding the Behavior of Youth on Social Media"), 
     sidebarLayout(
-      sidebarPanel(uiOutput("selectVariable")), 
+      sidebarPanel(uiOutput("selectVariable"),
+                   print("This chart is a behavioral analysis of young people within the age 
+            range of 14 to 23 years old. All the behaviors displayed in this chart are 
+            qualitative data collected from survey respondents. The variables are categorized by age 
+            for same-age comparison or cross-chart analysis, in order to narrow the age range down 
+            to the ones with the most social media usage for the results to be more significant. 
+            Overall results show that youth 18-19 years old have the most social media usage, 
+            the least exercise time, and the highest number of social media platforms. ")), 
       mainPanel(plotlyOutput("chosenPlot"))
+      
     )
 )
 
