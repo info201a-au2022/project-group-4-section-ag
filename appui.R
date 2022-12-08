@@ -1,6 +1,5 @@
 library(plotly)
 library(shinythemes)
-
 library(markdown)
 library(shiny)
 
@@ -60,8 +59,13 @@ cindy_page <- tabPanel(
             qualitative data collected from survey respondents. The variables are categorized by age 
             for same-age comparison or cross-chart analysis, in order to narrow the age range down 
             to the ones with the most social media usage for the results to be more significant. 
-            Overall results show that youth 18-19 years old have the most social media usage, 
-            the least exercise time, and the highest number of social media platforms. ")), 
+            Overall results show that all young people between 14 and 23 have roughly 2 social media
+                         platforms. All age except the 15-years-old has felt that they are exposed to inappropriate content on 
+                         social media. This shows that almost all age range are being influenced. Especially, 
+                         people at 16, 21, and 22 rate around 5 out of ten  for the inappropriate content they are 
+                         exposed to. In the last graph, we can understand the influence of social media on physical health. 
+                         People at all age spend more or equal amount of time on social media compared to the time on 
+                         exercise. We can see a spike for the 19-years-old, spending 1.3 hours more.")), 
       mainPanel(plotlyOutput("chosenPlot"))
       
     )
