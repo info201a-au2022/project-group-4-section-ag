@@ -88,6 +88,7 @@ summary_page <- tabPanel(
     includeMarkdown("./docs/summary.Rmd")
   )
 )  
+
 ui <- navbarPage(
   theme = shinytheme("journal"), 
   "Group 4",

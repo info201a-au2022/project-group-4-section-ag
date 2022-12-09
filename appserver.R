@@ -5,6 +5,7 @@ library(ggplot2)
 library(plotly)
 source("./source/table.R")
 
+# dataset for first graph
 ds2_3$age <- as.numeric(substr(ds2_3$age , 1, 2))
 
 # for hui page
@@ -45,6 +46,7 @@ server <- function(input, output) {
   })
   )
   
+  # give back dataset
   data <- reactive({
     if ( "number_of_social_media_platforms" %in% input$chosen) return(final_table$number_of_social_media_platforms)
     if ( "inappropriate_content_degree" %in% input$chosen) return(final_table$inappropriate_content_degree)
@@ -53,14 +55,16 @@ server <- function(input, output) {
     if ( "time_on_social_media" %in% input$chosen) return(final_table$time_on_social_media)
   })
   
+  # give unit for each graph
   unit <- reactive({
-    if ( "number_of_social_media_platforms" %in% input$chosen) return("number of platforms")
-    if ( "inappropriate_content_degree" %in% input$chosen) return("inappropriate degree")
+    if ( "number_of_social_media_platforms" %in% input$chosen) return("number of platforms(N)")
+    if ( "inappropriate_content_degree" %in% input$chosen) return("inappropriate degree(out of 10)")
     if ( "time_on_exercise" %in% input$chosen) return("hour(s)")
     if ( "how_much_more_hours_spend_on_social_media_compared_to_exercise" %in% input$chosen) return("hour(s)")
     if ( "time_on_social_media" %in% input$chosen) return("hour(s)")
   })
 
+  # return plots for youth analysis
   output$chosenPlot <- renderPlotly(return({
     value <- data()
     p <- ggplot(data = final_table) + 
@@ -86,6 +90,7 @@ server <- function(input, output) {
   })
   )
   
+  # return dataset to use
   data2 <- reactive({
     if ("emotion" %in% input$button) return(bangla_data %>% select(time_on_sm, emotion_influence_by_other_post))
     if ("feeling" %in% input$button) return(bangla_data %>% select(time_on_sm, p30_feeling_down_depress_hopeless))
@@ -94,6 +99,7 @@ server <- function(input, output) {
     if ("sleep" %in% input$button) return(bangla_data %>% select(time_on_sm, p30_sleep_quality_rate))
   })
   
+  # return last visualization plot
   output$buttonPlot <- renderPlotly(return({
     se_data <- data2()
     v <- se_data %>% select(2) %>% unique() %>% pull()
