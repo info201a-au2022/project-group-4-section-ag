@@ -11,6 +11,10 @@
 
 Our main question is **understanding how social media affects our mental health**. This question is important because, in our current generation, almost everyone with technology is exposed to social media. To address this, we will create visuals of patterns and correlations between social media use and user characteristics and trends.
 
+## Keywords
+health, mental health, social media, technology, depression, withdrawal;
+
+
 ## Introduction
 
 Our project focuses on the effects of social media on mental health. Social media has become very prominent in the last decade creating a place of comfort for some and sadness for others. Through our datasets, we want to showcase how it has affected the majority of the population and create awareness of how much impact social media has on people, especially the current generation that has grown up with exposure to social media. There are different types of social media exposure such as media/current event awareness, lives of individuals, status updates of celebrities, and much more. For many, it may be a personal diary, while others showcase their work. We will be using this project to explore and learn more about these users.
@@ -71,58 +75,6 @@ Islam, Md. Rabiul, et al. “Data Set Concerning the Use of Social Networking Si
 
 Gupta, Saptorshi, and Ayan Ganguly. “Effect of Social Media on Mental Health during Covid-19 Lockdowns in India.” Zenodo, 16 Sept. 2021, https://zenodo.org/record/5512843#.Y2C1HOzMKqV.
 
-
-```{r setup, include=FALSE} 
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
-library(lintr)
-```
-
-### Dynamic Paragraph
-
-```{r, echo = FALSE}
-source("./source/summary_info.R")
-summary_info
-```
-
-In this analysis, summary statistics were computed using the largest dataset of the project to find the relationship between social media usage among youth and their mental well-being. We used data such as inappropriate content, the amount of time spent on social media, preferred method of communication, etc. Among all 291 observations in the dataset, the youngest participants are two 14-year-old teenagers, and the oldest participants are eight 23-year-old youths. From the summary conclusion, it was found that participants who felt the most exposed to inappropriate content on social media mainly used Whatsapp and Instagram. However, most of them only use social media for less than 2.5 hours per day. It was also found that older participants in this data-collection process prefer face-to-face and phone communication instead of text messages.
-
-
-## Table
-
-```{r, echo = FALSE}
-source("./source/table.R")
-final_table
-```
-
-This table shows how 291 young people between the age of 14 and 23 used social media in 2018. On average, most young people use more than 2 social media platforms. On a scale from one to ten, most teenagers rate themselves a number between 3 to 6 in terms of the amount of inappropriate content they were exposed to on their social media platforms. The last interesting observation is young people's time on social media and exercise. Of all 291 people between 14 and 23, nobody spent more time on exercise than that on social media. On average, people between 18 and 21 spent at least one more hour on social media compared to exercise. I want to include this table because this table shows the negative impact of social media on young people both mentally and physically.
-
-## Chart 1
-
-```{r, echo = FALSE}
-source("./source/chart_cindy.R")
-social_media_versus_exercise_plot
-```
-
-This graph shows how young people of different ages spent time on social media relative to exercise. Particularly, this bar plot reveals the relationship between time difference with age. The chart is a bell-like shape, and it is mostly normal-distributed. Young people between 18 and 21 spend more time on social media than on exercise. On the other hand, the people younger and older than them have a slightly more balanced time usage. I include this graph because it clearly revealed how people of different ages use social media.
-
-## Chart 2
-
-```{r, echo = FALSE}
-source("./source/chart_haipei.R")
-age_versus_number_of_sm_plot
-
-```
-
-This visualization is a scatterplot of the number of social media platforms 14 to 23-year-olds own. From the scatterplot, there isn’t a significant correlation between age and the number of platforms. However, it was shown that youth above 19 generally use social media platforms more than those under 19. There is especially a spike in the number of ages 21-23 which emphasizes the main audience of different medias. It purposefully visualizes different distributions of media and age. 
-
-## Chart 3
-```{r, echo=FALSE}
-source("./source/chart_hui.R")
-age_versus_inappropriate_content_degree
-```
-
-In the plot of age vs. the degree of inappropriate content, there isn't a very significant coefficient for the trend, however, this consistency may tell us about the trajectory and content on social media. There is a subtle increase in the degree of severity as the kid ages which may be proportional to their maturity and what they perceive to be inappropriate mentally. This helps gives us insight of how social media affects the mental of the users. Furthermore, the average degree hovers around four out of ten. There lacks data of 15 year olds thus an outlier, but from this data, media filters should be implemented for the younger audience to help reduce the number. 
-
 ## Findings:
  
 1. How does social media trends affect the rise or decrease of depression?  
@@ -162,7 +114,3 @@ Thank you to this team who is reliable and flexible.
 - Arad, A., Barzilay, O., & Perchick, M. (2017, February 13). The impact of facebook on social comparison and happiness: Evidence from a natural experiment. SSRN. Retrieved October 31, 2022, from https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2916158
 - Barasch, A., Zauberman, G., & Diehl, K. (2017, November 14). How the intention to share can undermine enjoyment: Photo-taking goals and evaluation of experiences. OUP Academic. Retrieved October 31, 2022, from https://academic.oup.com/jcr/article/44/6/1220/4627834?login=false
 - Schønning, V., Hjetland, G. J., Aarø, L. E., & Skogen, J. C. (2020, August 14). Data_Sheet_1_Social media use and mental health and well-being among adolescents – a scoping review.docx. figshare. Retrieved October 31, 2022, from https://figshare.com/articles/dataset/Data_Sheet_1_Social_Media_Use_and_Mental_Health_and_Well-Being_Among_Adolescents_A_Scoping_Review_docx/12806267/1
-
-
-## Appendix A: Questions:
-No questions.

@@ -49,11 +49,21 @@ hui_page <- tabPanel(
   )
 )
 
+# cindy page
+selectVariable <- selectInput("chosen", 
+              "Chose a question you are interested", 
+              choices = list("How many social media platforms young people have per person?" = colNames[1], 
+                             "How much do young people feel that they are exposed to inappropriate content(out of 10)?" = colNames[2], 
+                             "How much time do young people spend on social media on average per day?" = colNames[3], 
+                             "How much time do young people spend on exercise on average per day?" = colNames[4], 
+                             "How much more hours do young people spend on social media compared to exercise on average per day?" = colNames[5]), 
+              selected = 1)
+
 cindy_page <- tabPanel(
     "Youth Analysis", 
     titlePanel("Understanding the Behavior of Youth on Social Media"), 
     sidebarLayout(
-      sidebarPanel(uiOutput("selectVariable"),
+      sidebarPanel(selectVariable,
                    print("This chart is a behavioral analysis of young people within the age 
             range of 14 to 23 years old. All the behaviors displayed in this chart are 
             qualitative data collected from survey respondents. The variables are categorized by age 
@@ -71,11 +81,20 @@ cindy_page <- tabPanel(
     )
 )
 
+selectButton <- selectInput("button", 
+              label = h3("Select a Variable to See its Relationship With Time on Social Media"),
+              choices = list("Getting Emotionally Influenced by Other's Posts?" = "emotion", 
+                             "Feeling Down, Depressed or Hopeless." = "feeling", 
+                             "Poor Appetite or Aver-eating" = "appe",
+                             "Worrying Too Much About Different Things" = "worry",
+                             "Sleep Quality" = "sleep"), 
+              selected = 1)
+
 last_page <- tabPanel(
   "Negative Influence of Social Media", 
   titlePanel("Understanding the Negative Effects of Social Media on Mental Health and Physical Health"), 
   sidebarLayout(
-    sidebarPanel(uiOutput("selectButton"), 
+    sidebarPanel(selectButton, 
                  print("This chart is a stacked bar graph that analyses the negative effects of social media on mental health and physical health. All the variables in this graph are qualitative data collected from survey respondents, who would answer ther questions on a scale that determines frequency. Variables include analyzing emotional swings, overthinking, anxiety, depression, and sleep quality. The analysis of this chart provides valuable information which leads to the conclusion that the more time users spend on social media, the more mental health issues they experience.")), 
     mainPanel(plotlyOutput("buttonPlot"))
   )
