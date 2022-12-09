@@ -31,7 +31,19 @@ server <- function(input, output) {
     ggplotly(plotLine)
   })
   )
-
+  
+  # cindy page
+  output$selectVariable <- renderUI(return({
+    selectInput("chosen", 
+                "Chose a question you are interested", 
+                choices = list("How many social media platforms young people have per person?" = colNames[1], 
+                               "How much do young people feel that they are exposed to inappropriate content(out of 10)?" = colNames[2], 
+                               "How much time do young people spend on social media on average per day?" = colNames[3], 
+                               "How much time do young people spend on exercise on average per day?" = colNames[4], 
+                               "How much more hours do young people spend on social media compared to exercise on average per day?" = colNames[5]), 
+                selected = 1)
+  })
+  )
   
   data <- reactive({
     if ( "number_of_social_media_platforms" %in% input$chosen) return(final_table$number_of_social_media_platforms)
@@ -62,6 +74,17 @@ server <- function(input, output) {
   )
   
   # last page
+  output$selectButton <- renderUI(return({
+    selectInput("button", 
+                label = h3("Select a Variable to See its Relationship With Time on Social Media"),
+                choices = list("Getting Emotionally Influenced by Other's Posts?" = "emotion", 
+                                "Feeling Down, Depressed or Hopeless." = "feeling", 
+                                "Poor Appetite or Aver-eating" = "appe",
+                                "Worrying Too Much About Different Things" = "worry",
+                                "Sleep Quality" = "sleep"), 
+                 selected = 1)
+  })
+  )
   
   data2 <- reactive({
     if ("emotion" %in% input$button) return(bangla_data %>% select(time_on_sm, emotion_influence_by_other_post))
